@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_headlines">
+
+    <sticky_fragment
+        android:id="@+id/navigation_headlines"
+        android:name="com.bignerdranch.newsreader.ui.headlines.HeadlinesFragment"
+        android:label="@string/title_headlines"
+        tools:layout="@layout/fragment_headlines" >
+
+    </sticky_fragment>
+
+    <sticky_fragment
+        android:id="@+id/navigation_customsearch"
+        android:name="com.bignerdranch.newsreader.ui.customsearch.CustomSearch"
+        android:label="@string/title_custom_search"
+        tools:layout="@layout/fragment_customsearch" >
+    </sticky_fragment>
+
+    <sticky_fragment
+        android:id="@+id/navigation_savedarticles"
+        android:name="com.bignerdranch.newsreader.ui.savedarticles.SavedArticlesFragment"
+        android:label="@string/title_saved_articles"
+        tools:layout="@layout/fragment_savedarticles" >
+    </sticky_fragment>
+    <action
+        android:id="@+id/action_global_navigation_headlines"
+        app:destination="@id/navigation_headlines"
+        app:popUpTo="@id/navigation_headlines"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_navigation_customsearch"
+        app:destination="@id/navigation_customsearch"
+        app:popUpTo="@id/navigation_customsearch"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_navigation_savedarticles"
+        app:destination="@id/navigation_savedarticles"
+        app:popUpTo="@id/navigation_savedarticles"
+        app:launchSingleTop="true" />
+
+</navigation>
